@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         equalLbl.textColor = UIColor.white
         billField.textColor = UIColor.white
         billField.updateFocusIfNeeded()
+        
         let userDefaultsSetting = UserDefaults.standard
         let selectedValue:Int = userDefaultsSetting.integer(forKey: "tipPercent")
         percentSelectSG.selectedSegmentIndex = selectedValue
@@ -53,13 +54,12 @@ class ViewController: UIViewController {
     
     @IBAction func percentChange(_ sender: Any) {
         self.calcTip(Any.self)
-        let userDefaults = UserDefaults.standard
-        userDefaults.set(percentSelectSG.selectedSegmentIndex, forKey: "tipPercent")
+       
         
     }
    
     @IBAction func calcTip(_ sender: Any) {
-             
+        
         let percent = [0.18,0.20,0.25];
         let bill = Double(billField.text!) ?? 0
         let tip = bill*percent[percentSelectSG.selectedSegmentIndex];
@@ -72,6 +72,12 @@ class ViewController: UIViewController {
         splitOneLbl.text = String.init(format: "$%.2f", oneSplit)
         splitTwoLbl.text = String.init(format: "$%.2f", twoSplit)
         splitThreeLbl.text = String.init(format: "$%.2f", threeSplit)
-            }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let userDefaultsSetting = UserDefaults.standard
+        let selectedValue:Int = userDefaultsSetting.integer(forKey: "tipPercent")
+        percentSelectSG.selectedSegmentIndex = selectedValue
+    }
 }
 

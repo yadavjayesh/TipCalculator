@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		150A9A791E063DAC00A7E9EF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150A9A781E063DAC00A7E9EF /* SettingsViewController.swift */; };
 		152F53921E03B9E4009093D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152F53911E03B9E4009093D0 /* AppDelegate.swift */; };
 		152F53941E03B9E4009093D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152F53931E03B9E4009093D0 /* ViewController.swift */; };
 		152F53971E03B9E4009093D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 152F53951E03B9E4009093D0 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		150A9A781E063DAC00A7E9EF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		152F538E1E03B9E3009093D0 /* TipCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		152F53911E03B9E4009093D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		152F53931E03B9E4009093D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		152F53851E03B9E3009093D0 = {
 			isa = PBXGroup;
 			children = (
+				150A9A781E063DAC00A7E9EF /* SettingsViewController.swift */,
 				152F53901E03B9E3009093D0 /* TipCalculator */,
 				152F53A51E03B9E4009093D0 /* TipCalculatorTests */,
 				152F53B01E03B9E4009093D0 /* TipCalculatorUITests */,
@@ -261,6 +264,7 @@
 			files = (
 				152F53941E03B9E4009093D0 /* ViewController.swift in Sources */,
 				152F53921E03B9E4009093D0 /* AppDelegate.swift in Sources */,
+				150A9A791E063DAC00A7E9EF /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
