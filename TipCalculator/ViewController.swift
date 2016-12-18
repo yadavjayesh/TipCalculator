@@ -22,14 +22,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tipLbl.textColor = UIColor.white
+        tipLbl.text = String.init(format: "$%.2f", 0)
         totalLbl.textColor = UIColor.white
+        totalLbl.text = String.init(format: "$%.2f", 0)
         splitOneLbl.textColor = UIColor.white
+        splitOneLbl.text = String.init(format: "$%.2f", 0)
         splitTwoLbl.textColor = UIColor.white
+        splitTwoLbl.text = String.init(format: "$%.2f", 0)
         splitThreeLbl.textColor = UIColor.white
+        splitThreeLbl.text = String.init(format: "$%.2f", 0)
         plsLbl.textColor = UIColor.white
         equalLbl.textColor = UIColor.white
         billField.textColor = UIColor.white
-        // Do any additional setup after loading the view, typically from a nib.
+        billField.updateFocusIfNeeded()
+        let userDefaultsSetting = UserDefaults.standard
+        let selectedValue:Int = userDefaultsSetting.integer(forKey: "tipPercent")
+        percentSelectSG.selectedSegmentIndex = selectedValue
+               // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,11 +52,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func percentChange(_ sender: Any) {
-        self.calcTip(Any)
+        self.calcTip(Any.self)
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(percentSelectSG.selectedSegmentIndex, forKey: "tipPercent")
+        
     }
    
     @IBAction func calcTip(_ sender: Any) {
-        
+             
         let percent = [0.18,0.20,0.25];
         let bill = Double(billField.text!) ?? 0
         let tip = bill*percent[percentSelectSG.selectedSegmentIndex];
@@ -60,6 +72,6 @@ class ViewController: UIViewController {
         splitOneLbl.text = String.init(format: "$%.2f", oneSplit)
         splitTwoLbl.text = String.init(format: "$%.2f", twoSplit)
         splitThreeLbl.text = String.init(format: "$%.2f", threeSplit)
-    }
+            }
 }
 

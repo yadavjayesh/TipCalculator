@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hsy-V6-qvI">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="$" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hsy-V6-qvI">
                                 <rect key="frame" x="16" y="28" width="343" height="212"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.43921568630000002" green="0.75686274509999996" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -122,13 +122,7 @@
                             <outletCollection property="gestureRecognizers" destination="YVF-cb-J0l" appends="YES" id="ter-6b-SGZ"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculator" id="wmP-b2-CdN">
-                        <barButtonItem key="rightBarButtonItem" title="🛠" id="Wtf-Hj-hVz" userLabel="🛠">
-                            <connections>
-                                <segue destination="f3C-Ms-Zsh" kind="show" id="js2-ka-yqu"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="wmP-b2-CdN"/>
                     <connections>
                         <outlet property="billField" destination="Hsy-V6-qvI" id="IqX-jP-MW2"/>
                         <outlet property="equalLbl" destination="QMt-jA-R9R" id="JTv-26-hrH"/>
@@ -148,25 +142,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="866.39999999999998" y="148.87556221889056"/>
-        </scene>
-        <!--Settings View Controller-->
-        <scene sceneID="6Ug-6T-vgq">
-            <objects>
-                <viewController id="f3C-Ms-Zsh" customClass="SettingsViewController" customModule="TipCalculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yXk-Wd-4Me"/>
-                        <viewControllerLayoutGuide type="bottom" id="WUA-Dq-aqm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7EQ-s3-o8h">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4aS-e7-Dpc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1564" y="146.17691154422789"/>
+            <point key="canvasLocation" x="1218" y="143"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BcB-XQ-r3M">
