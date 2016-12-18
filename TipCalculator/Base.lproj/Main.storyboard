@@ -122,7 +122,13 @@
                             <outletCollection property="gestureRecognizers" destination="YVF-cb-J0l" appends="YES" id="ter-6b-SGZ"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculator" id="wmP-b2-CdN"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="wmP-b2-CdN">
+                        <barButtonItem key="rightBarButtonItem" title="🛠" id="Wtf-Hj-hVz" userLabel="🛠">
+                            <connections>
+                                <segue destination="f3C-Ms-Zsh" kind="show" id="js2-ka-yqu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="Hsy-V6-qvI" id="IqX-jP-MW2"/>
                         <outlet property="equalLbl" destination="QMt-jA-R9R" id="JTv-26-hrH"/>
@@ -144,6 +150,24 @@
             </objects>
             <point key="canvasLocation" x="866.39999999999998" y="148.87556221889056"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="6Ug-6T-vgq">
+            <objects>
+                <viewController id="f3C-Ms-Zsh" customClass="SettingsViewController" customModule="TipCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yXk-Wd-4Me"/>
+                        <viewControllerLayoutGuide type="bottom" id="WUA-Dq-aqm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7EQ-s3-o8h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4aS-e7-Dpc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1564" y="146.17691154422789"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="BcB-XQ-r3M">
             <objects>
@@ -163,5 +187,5 @@
             <point key="canvasLocation" x="-72.799999999999997" y="148.87556221889056"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="0.2929832771440164" green="1" blue="0.31826143555546915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+    <color key="tintColor" red="0.010069295304396328" green="0.034700190355329896" blue="0.011133588673772767" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
