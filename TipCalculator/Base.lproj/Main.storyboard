@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="$" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hsy-V6-qvI">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="$" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hsy-V6-qvI">
                                 <rect key="frame" x="16" y="28" width="343" height="212"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.43921568630000002" green="0.75686274509999996" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

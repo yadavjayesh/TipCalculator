@@ -34,11 +34,13 @@ class ViewController: UIViewController {
         plsLbl.textColor = UIColor.white
         equalLbl.textColor = UIColor.white
         billField.textColor = UIColor.white
-        billField.updateFocusIfNeeded()
+    
         
         let userDefaultsSetting = UserDefaults.standard
         let selectedValue:Int = userDefaultsSetting.integer(forKey: "tipPercent")
         percentSelectSG.selectedSegmentIndex = selectedValue
+        let billAmt = userDefaultsSetting.string(forKey: "billAmount")
+        billField.text = String.init(format: "%.2f", billAmt!)
                // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -78,6 +80,12 @@ class ViewController: UIViewController {
         let userDefaultsSetting = UserDefaults.standard
         let selectedValue:Int = userDefaultsSetting.integer(forKey: "tipPercent")
         percentSelectSG.selectedSegmentIndex = selectedValue
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        let userDefaultsSetting = UserDefaults.standard
+        userDefaultsSetting.set(billField.text, forKey: "billAmount")
+        userDefaultsSetting.synchronize()
     }
 }
 
